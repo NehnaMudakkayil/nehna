@@ -14,7 +14,7 @@ result= aio.create_feed(new)
 #logging exception handler
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
-logger = logging.getLogger(_name_)
+logger = logging.getLogger(__name__)
 
 from telegram.ext import Updater, CommandHandler,MessageHandler, Filters 
 import requests #Getting the data from the cloud
@@ -45,5 +45,5 @@ def main():
   u.start_polling()
   u.idle()
  
-if _name_ == '_main_':
+if__name__ == '__main__':
     main()
